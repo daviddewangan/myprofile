@@ -1,0 +1,20 @@
+{% block content %}
+<form method="post">
+	<h2>Contact Us</h2>
+    {% csrf_token %}
+     <div class="row">
+		<div class="col-6">
+			<label for="text">Enter Name</label>
+            {{ form.name }}
+            <label for="text">Enter Email</label>
+            {{ form.email }}
+            <label for="text">Enter Phone No.</label>
+            {{ form.number }}
+            <label for="text">Enter Your Message Here..!</label>
+            {{ form.message }}
+            <button type="submit" style="margin-left: 225px;"class="btn btn-primary">SEND</button>
+        </div>
+     </div>
+</form>
+{% endblock %}
+      
