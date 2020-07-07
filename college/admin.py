@@ -1,5 +1,5 @@
 from django.contrib import admin
-from college.models import Project, Webpage, Category, Blog, Contact
+from college.models import Project, Webpage, Category, Blog, Contact, Skills
 
 # Register your models here.
 class ProjectAdmin(admin.ModelAdmin):
@@ -16,3 +16,8 @@ class ContactAdmin(admin.ModelAdmin):
     list_display = ['name','email','number']
     
 admin.site.register(Contact,ContactAdmin)
+
+class SkillAdmin(admin.ModelAdmin):
+    list_display = ['name','exp','percent']
+    
+admin.site.register(Skills,SkillAdmin)

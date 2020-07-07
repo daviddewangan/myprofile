@@ -4,5 +4,4 @@ from college import views
 
 urlpatterns = [
    path('',ProjectListAndFormView.as_view(), name='main'),
-
 ]

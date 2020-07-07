@@ -42,8 +42,15 @@ class Contact(models.Model):
     number = models.IntegerField()
     message = models.TextField()
     
+SKILLS_CHOICE = (
+    ('beginer', 'beg'),
+    ('intermediate','inter'),
+    ('professional','pro')
+    )
     
-    
-
+class Skills(models.Model):
+    name = models.CharField(max_length=100)
+    exp = models.CharField(choices=SKILLS_CHOICE,max_length=200)
+    percent = models.IntegerField()
     
     
